@@ -1,4 +1,4 @@
-# nconf-strip-json-comments
+# nconf-strip-json-comments [![Build Status](https://travis-ci.org/thirtified/nconf-strip-json-comments.svg?branch=master)](https://travis-ci.org/thirtified/nconf-strip-json-comments)
 
 A tiny module enabling `nconf` to parse commented JSON files.
 
