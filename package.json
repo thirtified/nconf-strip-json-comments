@@ -1,6 +1,6 @@
 {
   "name": "nconf-strip-json-comments",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Enable nconf to parse commented JSON files.",
   "main": "index.js",
   "scripts": {
