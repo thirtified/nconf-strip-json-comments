@@ -15,12 +15,11 @@ A tiny module enabling `nconf` to parse commented JSON files.
   }
 ```
 
-Comments in JSON files can be quite helpful, e.g. in configuration files. However, comments are not part of the [JSON format](http://www.json.org), and commented JSON files will e.g. cause exceptions when using `JSON.parse`.
-Tools like [jsonminify](https://github.com/fkei/JSON.minify) or [strip-json-comments](https://github.com/sindresorhus/strip-json-comments) allow for parsing of commented JSON files. This module enables the [nconf](https://github.com/flatiron/nconf) module to parse commented JSON files.
+Comments in JSON files can be helpful e.g. in configuration files. However, comments are not part of the [JSON format](http://www.json.org) and standard JSON tools such as `JSON.parse` can't handle commented files. Instead, tools like [jsonminify](https://github.com/fkei/JSON.minify) or [strip-json-comments](https://github.com/sindresorhus/strip-json-comments) are required. This module enables the [nconf](https://github.com/flatiron/nconf) module to parse commented JSON files using [strip-json-comments](https://github.com/sindresorhus/strip-json-comments).
 
 
 ## Usage
-To enable nconf to parse commented JSON files by default:
+Enable `nconf` to parse commented JSON files by default:
 
 ```javascript
   var nconf = require('nconf');
@@ -28,10 +27,11 @@ To enable nconf to parse commented JSON files by default:
 
   nconf.file('path_to_some_commented_JSON_');
 ```
-Note that this will enable extended parsing _globally_, that is, whereever nconf is required.
+Note that this will enable extended parsing _globally_, that is, for all occurrences of `nconf` (also in nested modules).
 
 
-Instead, you can also use the format explicitly:
+You can also use the module's extended JSON format explicitly:
+
 ```javascript
   var nconf = require('nconf');
   var commentedJsonFormat = require('nconf-strip-json-comments').format;
@@ -39,12 +39,11 @@ Instead, you can also use the format explicitly:
   nconf.file({file: 'path_to_some_commented_JSON_', format: commentedJsonFormat});
 ```
 
-To disable a previously enabled extended parsing, use `restore()`:
+To disable a previously globally enabled parsing, use `restore()`:
 
 ```javascript
   ...
   require('nconf-strip-json-comments').restore(nconf);
-
 ```
 
 
