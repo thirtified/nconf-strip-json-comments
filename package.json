@@ -1,0 +1,26 @@
+{
+  "name": "nconf-strip-json-comments",
+  "version": "1.0.0",
+  "description": "Enable nconf to parse commented JSON files.",
+  "main": "index.js",
+  "scripts": {
+    "test":"mocha --compilers coffee:coffee-script/register test/*.coffee"
+  },
+  "keywords": [
+    "nconf",
+    "JSON",
+    "comments",
+    "stripJsonComments"
+  ],
+  "author": "thirtified",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "nconf": "^0.7.1",
+    "strip-json-comments": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.0",
+    "coffee-script": "^1.8.0",
+    "chai": "1.10.0"
+  }
+}

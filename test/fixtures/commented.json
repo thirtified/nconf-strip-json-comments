@@ -1,0 +1,10 @@
+{
+  "a": "a value", // this is a comment
+  "b": ["an array"],
+  /*
+    another comment
+  */
+  "c": {
+    "d": /* third comment */ "another value"
+  }
+}
