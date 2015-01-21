@@ -25,7 +25,8 @@ Enable `nconf` to parse commented JSON files by default:
   var nconf = require('nconf');
   require('nconf-strip-json-comments')(nconf);
 
-  nconf.file('path_to_some_commented_JSON_');
+  // load file
+  nconf.file('path_to_some_commented_JSON_file');
 ```
 Note that this will enable extended parsing _globally_, that is, for all occurrences of `nconf` (also in nested modules).
 
@@ -36,7 +37,8 @@ You can also use the module's extended JSON format explicitly:
   var nconf = require('nconf');
   var commentedJsonFormat = require('nconf-strip-json-comments').format;
 
-  nconf.file({file: 'path_to_some_commented_JSON_', format: commentedJsonFormat});
+  // load file
+  nconf.file({file: 'path_to_some_commented_JSON_file', format: commentedJsonFormat});
 ```
 
 To disable a previously globally enabled parsing, use `restore()`:

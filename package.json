@@ -12,7 +12,17 @@
     "comments",
     "stripJsonComments"
   ],
-  "author": "thirtified",
+  "author": {
+    "name": "Julian Dreissig",
+    "email": "julian@thirtified.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thirtified/nconf-strip-json-comments.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thirtified/nconf-strip-json-comments/issues"
+  },
   "license": "BSD-3-Clause",
   "dependencies": {
     "nconf": "^0.7.1",
